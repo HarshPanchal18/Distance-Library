@@ -7,6 +7,8 @@ android {
     namespace 'com.example.distance_lib'
     compileSdk 33
 
+    group 'com.github.HarshPanchal18.Distance-Library'
+
     defaultConfig {
         minSdk 24
         targetSdk 33
