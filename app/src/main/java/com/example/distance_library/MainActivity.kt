@@ -8,27 +8,19 @@ import com.example.distance_lib.Point
 import com.example.distance_library.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
-
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val buenosAiresObeliscoPoint =
-            Point((-34.6037389).toInt(), (-58.3815704).toInt())
+        val delhiRailwayStation = Point(28.6612218.toInt(), 77.2276811.toInt())
+        val jaipurRailwayStation = Point(26.9128256.toInt(), 75.7875926.toInt())
 
-        val nycStatueOfLibertyPoint =
-            Point(40.6892494.toInt(), (-74.0445004).toInt())
-
-        val distanceBetweenPoints =
-            LatLonDistanceCalculator.calculateDistance(
-                buenosAiresObeliscoPoint,
-                nycStatueOfLibertyPoint
-            )
+        val distanceBetweenPoints: Float =
+            LatLonDistanceCalculator.calculateDistance(delhiRailwayStation, jaipurRailwayStation)
 
         binding.distanceTextView.text =
-            "Between the Obelisco and the Statue of Liberty there are: $distanceBetweenPoints KM"
+            "Between Delhi Railway station and Jaipur Railway station there are: $distanceBetweenPoints KM"
     }
 }

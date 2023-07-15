@@ -18,4 +18,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Distance-Library"
 include ':app'
-include ':distance-lib'
