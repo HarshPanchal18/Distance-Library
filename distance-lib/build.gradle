@@ -50,7 +50,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.HarshPanchal18'
                 artifactId = 'Distance-Library'
-                version = '1.7'
+                version = '1.9'
             }
         }
     }
